@@ -1,7 +1,6 @@
 import React from "react";
-import {Link} from 'react-router-dom'
+import {BrowserRouter as Router, Route, Link} from 'react-router-dom'
 import './Header.css'
-import logo from './images and icons/apmlogo.png'
 
 function Header(props){
     return(
@@ -13,7 +12,7 @@ function Header(props){
                 <li><Link to="/">Devices</Link></li>
                 <li><Link to="/shop">Buy</Link></li>
                 <li><Link to="/map">Map</Link></li>
-                <li><Link to="/info">Info</Link></li>
+                <li><Link to="/info">About</Link></li>
             </ul>
         </div>
     )

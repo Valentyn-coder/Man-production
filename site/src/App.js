@@ -1,9 +1,10 @@
 import React, {useState} from 'react';
 import './App.css';
-import Card from './components/Card'
 import Devices from './components/Devices'
 import Header from './components/Header'
 import Bottom from './components/Bottom';
+import About from './components/About';
+import { Route, Routes } from 'react-router-dom';
 
 function App() {
   
@@ -46,11 +47,13 @@ function App() {
   return (
     <div className='App'>
       <Header/>
-      <Devices tasks={tasks}/>
+        <Routes>
+          <Route exact path="/" element={<Devices tasks={tasks}/>}/>
+          <Route exact path="/info" element={<About/>}/>
+        </Routes>  
       <Bottom/>
     </div>
-    
-  );
+    );
 }
 
 export default App;
